@@ -62,6 +62,20 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    verificationEnvelopId: {
+      type: String,
+      sparse: true,
+    },
+    verificationEnvelopStatus: {
+      type: String,
+      default: NotStarted,
+    },
+    verificationCompletedAT: {
+      type: date,
+    }, 
+    verificationSignedDocument: {
+      type: String,
+    }
   },
   {
     timestamps: true,
